@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import Lontano from "../images/lontano-logo.webp";
+---
+
+<header
+  class='sticky top-0 bg-background flex items-center justify-between py-6'
+>
+  <span>
+    <Image src={Lontano} alt='Lontano' class='w-20 h-20 aspect-auto' />
+  </span>
+  <nav>
+    <ul class='flex justify-evenly gap-x-4 font-title font-medium'>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+        <a href=''>Inicio</a>
+      </li>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+        <a href=''>Nosotrxs</a>
+      </li>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+        <a href=''>Calendario</a>
+      </li>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+        <a href=''>Blog</a>
+      </li>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+        <a href=''>Mediateca</a>
+      </li>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+        <a href=''>Contacto</a>
+      </li>
+      <li class='opacity-80 hover:opacity-100 transition-opacity'>ES/EN</li>
+    </ul>
+  </nav>
+</header>
