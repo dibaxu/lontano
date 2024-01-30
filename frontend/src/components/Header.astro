@@ -7,29 +7,62 @@ import Lontano from "../images/lontano-logo.webp";
   class='sticky top-0 bg-background flex items-center justify-between py-6'
 >
   <span>
-    <Image src={Lontano} alt='Lontano' class='w-20 h-20 aspect-auto' />
+    <Image
+      id={"logo"}
+      src={Lontano}
+      alt='Lontano'
+      class='aspect-auto h-20 w-auto transition-all'
+    />
   </span>
   <nav>
     <ul class='flex justify-evenly gap-x-4 font-title font-medium'>
-      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+      <li
+        class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-accent transition-all'
+      >
         <a href=''>Inicio</a>
       </li>
-      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+      <li
+        class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-primary transition-all'
+      >
         <a href=''>Nosotrxs</a>
       </li>
-      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+      <li
+        class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-secondary transition-all'
+      >
         <a href=''>Calendario</a>
       </li>
-      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+      <li
+        class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-accent transition-all'
+      >
         <a href=''>Blog</a>
       </li>
-      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+      <li
+        class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-primary transition-all'
+      >
         <a href=''>Mediateca</a>
       </li>
-      <li class='opacity-80 hover:opacity-100 transition-opacity'>
+      <li
+        class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-secondary transition-all'
+      >
         <a href=''>Contacto</a>
       </li>
       <li class='opacity-80 hover:opacity-100 transition-opacity'>ES/EN</li>
     </ul>
   </nav>
 </header>
+
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    window.addEventListener("scroll", () => {
+      const logo = document.getElementById("logo");
+      if (logo && window.scrollY > 100) {
+        // puedes cambiar el valor 100 al threshold que prefieras
+        logo.classList.add("h-12", "w-auto");
+        logo.classList.remove("h-20");
+      } else {
+        logo.classList.add("h-20");
+        logo.classList.remove("h-12");
+      }
+    });
+  });
+</script>

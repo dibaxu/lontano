@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        "parallax-1": "url('../images/DSC_0046.jpg')",
+      },
       fontFamily: {
         body: ["Chivo Variable", "sans-serif"],
         title: ["Raleway Variable"],
