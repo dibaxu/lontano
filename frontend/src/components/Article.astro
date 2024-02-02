@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+const { title, image } = Astro.props;
+---
+
+<>
+  <aside class='flex justify-center items-center'>
+    <Image src={image} alt={title} loading='lazy' />
+  </aside>
+  <article class='col-span-2 min-h-96'>
+    <h2
+      class='relative inline-block font-title text-4xl font-semibold mb-4 before:absolute before:content-none before:w-0 before:h-1 before:bottom-0 before:left-0 before:bg-primary before:invisible transition-all ease-in-out hover:before:visible hover:before:w-full'
+    >
+      {title}
+    </h2>
+    <div class='grid gap-y-4 text-pretty'>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste itaque
+        explicabo similique veritatis, laboriosam repudiandae architecto ex
+        perferendis beatae aspernatur excepturi, quaerat harum odio quam at ad
+        quasi iure! Repudiandae?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste itaque
+        explicabo similique veritatis, laboriosam repudiandae architecto ex
+        perferendis beatae aspernatur excepturi, quaerat harum odio quam at ad
+        quasi iure! Repudiandae?
+      </p>
+    </div>
+  </article>
+</>

@@ -1,0 +1,30 @@
+---
+import Instagram from "../icons/Instagram.astro";
+import Youtube from "../icons/Youtube.astro";
+import Spotify from "../icons/Spotify.astro";
+const date = new Date().getFullYear();
+---
+
+<footer class='flex justify-evenly w-full text-sm opacity-80 my-8'>
+  <div>algo acá</div>
+  <div>{date} Lontano</div>
+  <div class='flex gap-2'>
+    <a
+      href='https://www.instagram.com/lontano.musica/'
+      target='_blank'
+      rel='noopener'
+    >
+      <Instagram class='fill-white h-4 w-4' />
+    </a>
+    <a href=''>
+      <Spotify class='fill-white h-4 w-auto' />
+    </a>
+    <a
+      href='https://www.youtube.com/@lontano.musica'
+      target='_blank'
+      rel='noopener'
+    >
+      <Youtube class='fill-white h-4 w-auto' />
+    </a>
+  </div>
+</footer>

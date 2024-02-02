@@ -1,19 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ImagesCarrousel from "@/components/ImagesCarrousel.astro";
+import Article from "@/components/Article.astro";
+import tapaDisco from "../images/LONTANO FINAL - Modificado.jpg";
 ---
 
 <Layout title='Lontano - Colectivo de creación musical'>
-  <main class=''>
+  <main class='grid gap-y-12'>
     <ImagesCarrousel />
     <div class='grid grid-cols-3 gap-x-6'>
-      <aside class=''>asie</aside>
-      <article class='col-span-2'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga et
-        accusamus id veritatis nostrum necessitatibus alias at dicta placeat,
-        earum quisquam animi! Porro dolorum magnam assumenda rem quae tenetur
-        dolore.
-      </article>
+      <Article title='A lo lejos, quien está al lado' image={tapaDisco} />
     </div>
     <h1 class='font-title font-bold text-6xl uppercase'>
       lontano playing trombone
