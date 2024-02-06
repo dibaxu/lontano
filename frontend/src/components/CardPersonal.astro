@@ -3,12 +3,17 @@ import BadgeRedes from "./BadgeRedes.astro";
 import Instagram from "@/icons/Instagram.astro";
 import Spotify from "@/icons/Spotify.astro";
 import Youtube from "@/icons/Youtube.astro";
+import { Image } from "astro:assets";
 const { nombre, imagen, rol, descripcion, redes } = Astro.props;
 ---
 
 <div class='flex flex-col max-w-64 p-4'>
   <div class='grid grid-cols-2'>
-    <img class='size-24 object-cover rounded-full' src={imagen} alt={nombre} />
+    <Image
+      class='size-24 object-cover rounded-full'
+      src={imagen}
+      alt={nombre}
+    />
     <div class=''>
       <h2 class='font-title text-lg font-semibold'>{nombre}</h2>
       <p class='text-sm opacity-80'>{rol}</p>
