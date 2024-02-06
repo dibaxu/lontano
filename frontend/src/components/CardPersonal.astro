@@ -3,15 +3,34 @@ import BadgeRedes from "./BadgeRedes.astro";
 import Instagram from "@/icons/Instagram.astro";
 import Spotify from "@/icons/Spotify.astro";
 import Youtube from "@/icons/Youtube.astro";
+import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+interface Props {
+  nombre: string;
+  imagen: string;
+  rol: string;
+  descripcion: string;
+  redes: {
+    instagram?: string;
+    spotify?: string;
+    youtube?: string;
+  };
+}
 const { nombre, imagen, rol, descripcion, redes } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/images/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagen])
+  throw new Error(
+    `"${imagen}" does not exist in glob: "src/images/*.{jpeg,jpg,png,gif}"`
+  );
 ---
 
 <div class='flex flex-col max-w-64 p-4'>
   <div class='grid grid-cols-2'>
     <Image
       class='size-24 object-cover rounded-full'
-      src={imagen}
+      src={images[imagen]()}
       alt={nombre}
     />
     <div class=''>
