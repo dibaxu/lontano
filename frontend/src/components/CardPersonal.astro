@@ -1,0 +1,41 @@
+---
+import BadgeRedes from "./BadgeRedes.astro";
+import Instagram from "@/icons/Instagram.astro";
+import Spotify from "@/icons/Spotify.astro";
+import Youtube from "@/icons/Youtube.astro";
+const { nombre, imagen, rol, descripcion, redes } = Astro.props;
+---
+
+<div class='flex flex-col max-w-64 p-4'>
+  <div class='grid grid-cols-2'>
+    <img class='size-24 object-cover rounded-full' src={imagen} alt={nombre} />
+    <div class=''>
+      <h2 class='font-title text-lg font-semibold'>{nombre}</h2>
+      <p class='text-sm opacity-80'>{rol}</p>
+    </div>
+  </div>
+  <p class='mt-4 text-sm opacity-80 text-pretty'>{descripcion}</p>
+  <div class='flex w-full gap-4 mt-2'>
+    {
+      redes?.instagram && (
+        <BadgeRedes url={redes.instagram}>
+          <Instagram class='h-4 w-4 fill-white  hover:fill-accent transition-colors' />
+        </BadgeRedes>
+      )
+    }
+    {
+      redes?.spotify && (
+        <BadgeRedes url={redes.instagram}>
+          <Spotify class='h-4 w-4 fill-white  hover:fill-accent transition-colors' />
+        </BadgeRedes>
+      )
+    }
+    {
+      redes?.youtube && (
+        <BadgeRedes url={redes.instagram}>
+          <Youtube class='h-4 w-4 fill-white  hover:fill-accent transition-colors' />
+        </BadgeRedes>
+      )
+    }
+  </div>
+</div>

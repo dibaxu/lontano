@@ -19,12 +19,12 @@ import Lontano from "../images/lontano-logo.webp";
       <li
         class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-accent transition-all'
       >
-        <a href=''>Inicio</a>
+        <a href='/'>Inicio</a>
       </li>
       <li
         class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-primary transition-all'
       >
-        <a href=''>Nosotrxs</a>
+        <a href='/about'>Nosotrxs</a>
       </li>
       <li
         class='opacity-80 hover:opacity-100 hover:underline-offset-4 hover:underline decoration-secondary transition-all'
@@ -59,7 +59,7 @@ import Lontano from "../images/lontano-logo.webp";
         // puedes cambiar el valor 100 al threshold que prefieras
         logo.classList.add("h-12", "w-auto");
         logo.classList.remove("h-20");
-      } else {
+      } else if (logo) {
         logo.classList.add("h-20");
         logo.classList.remove("h-12");
       }

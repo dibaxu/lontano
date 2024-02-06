@@ -1,0 +1,69 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardPersonal from "../../components/CardPersonal.astro";
+const PERSONAS = [
+  {
+    nombre: "Lontano",
+    descripcion:
+      "Lontano es un artista visual y músico que se dedica a la creación de contenido audiovisual y musical. Su trabajo se centra en la creación de paisajes sonoros y visuales que buscan generar una experiencia inmersiva en el espectador.",
+    redes: {
+      instagram: "https://www.instagram.com/lontano_/",
+      soundcloud: "https://soundcloud.com/lontano_",
+      spotify:
+        "https://open.spotify.com/artist/5X5z3z3z3z3z3z3z3z3z3z?si=5X5z3z3z3z3z3z3z3z3z3z",
+      youtube: "https://www.youtube.com/channel/5X5z3z3z3z3z3z3z3z3z3z",
+    },
+    imagen:
+      "https://plus.unsplash.com/premium_photo-1682175064657-d2c4fd9f095a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    rol: "Artista visual y músico",
+  },
+  {
+    nombre: "Lontano",
+    descripcion:
+      "Lontano es un artista visual y músico que se dedica a la creación de contenido audiovisual y musical. Su trabajo se centra en la creación de paisajes sonoros y visuales que buscan generar una experiencia inmersiva en el espectador.",
+    redes: {
+      youtube: "https://www.youtube.com/channel/5X5z3z3z3z3z3z3z3z3z3z",
+    },
+    imagen:
+      "https://plus.unsplash.com/premium_photo-1682175064657-d2c4fd9f095a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    rol: "Compositor",
+  },
+  {
+    nombre: "Lontano",
+    descripcion:
+      "Lontano es un artista visual y músico que se dedica a la creación de contenido audiovisual y musical. Su trabajo se centra en la creación de paisajes sonoros y visuales que buscan generar una experiencia inmersiva en el espectador.",
+    redes: {
+      soundcloud: "https://soundcloud.com/lontano_",
+      spotify:
+        "https://open.spotify.com/artist/5X5z3z3z3z3z3z3z3z3z3z?si=5X5z3z3z3z3z3z3z3z3z3z",
+      youtube: "https://www.youtube.com/channel/5X5z3z3z3",
+    },
+    imagen:
+      "https://plus.unsplash.com/premium_photo-1682175064657-d2c4fd9f095a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    rol: "Contrabajista",
+  },
+];
+---
+
+<Layout title='Lontano - Nostrxs'>
+  <main class=''>
+    <h1
+      class='inline-block font-title font-bold text-4xl uppercase my-8 underline-offset-4 underline decoration-primary'
+    >
+      Nosotrxs
+    </h1>
+    <section class='flex flex-wrap gap-x-12'>
+      {
+        PERSONAS.map(({ nombre, descripcion, redes, imagen, rol }) => (
+          <CardPersonal
+            nombre={nombre}
+            descripcion={descripcion}
+            redes={redes}
+            imagen={imagen}
+            rol={rol}
+          />
+        ))
+      }
+    </section>
+  </main>
+</Layout>
