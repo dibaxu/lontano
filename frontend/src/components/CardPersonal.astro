@@ -22,7 +22,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 if (!images[imagen])
   throw new Error(
-    `"${imagen}" does not exist in glob: "src/images/*.{jpeg,jpg,png,gif}"`
+    `"${imagen}" does not exist in glob: "../src/images/*.{jpeg,jpg,png,gif}"`
   );
 ---
 

@@ -8,7 +8,9 @@ const { title, image } = Astro.props;
     {image ? <Image src={image} alt={title} loading='lazy' /> : null}
   </aside>
   <article class='col-span-2 min-h-96 border-l-2 border-l-primary p-8'>
-    <h2 class='inline-block font-title text-4xl font-semibold mb-4'>
+    <h2
+      class="inline-block font-title text-4xl font-semibold mb-4 pb-2 lg:pb-0 cursor-pointer relative after:content-[''] after:bg-accent after:w-0 after:h-1 after:absolute after:top-[40px] after:left-0 after:duration-200 hover:after:w-full"
+    >
       {title}
     </h2>
     <div class='grid gap-y-4 text-pretty'>

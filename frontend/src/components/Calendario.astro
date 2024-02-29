@@ -1,0 +1,51 @@
+---
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
+const monthNames = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
+const daysNames = ["D", "L", "M", "M", "J", "V", "S"];
+---
+
+<div
+  class='grid grid-cols-7 grid-rows-7 gap-2 justify-items-center items-center size-96 p-4 rounded-lg border border-white'
+>
+  <h4 class='col-span-full'>
+    {
+      day +
+        " " +
+        new Date(year, month, day).getDay() +
+        " " +
+        monthNames[month] +
+        " " +
+        year
+    }
+  </h4>
+  {
+    daysNames.map((day) => (
+      <div class='bg-purple-200 w-full h-full self-center rounded-lg p-2 text-center'>
+        {day}
+      </div>
+    ))
+  }
+  {
+    Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
+      <div class='bg-orange-200 rounded-lg p-2 w-full h-full text-center'>
+        {day}
+      </div>
+    ))
+  }
+</div>
